@@ -1,0 +1,42 @@
+@contosso_pizza_HostAddress = http://localhost:5058
+
+GET {{contosso_pizza_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{contosso_pizza_HostAddress}}/api/pizzas
+Accept: application/json
+
+###
+
+GET {{contosso_pizza_HostAddress}}/api/pizzas/ddcad136-7ecf-4f41-b8c0-4c2aea4f463c
+Accept: application/json
+
+###
+
+POST {{contosso_pizza_HostAddress}}/api/pizzas
+Content-Type: application/json
+
+{
+    "name": "cheesy",
+    "isAllergic": false
+}
+
+###
+
+PUT {{contosso_pizza_HostAddress}}/api/pizzas/4ce6a34e-944e-4a46-8aa9-e6df197f7066
+Content-Type: application/json
+
+{
+    "id": "4ce6a34e-944e-4a46-8aa9-e6df197f7066",
+    "name": "Hawaiian",
+    "isAllergic": true
+}
+
+###
+
+DELETE  {{contosso_pizza_HostAddress}}/api/pizzas/f672426e-9df0-4b77-bb19-023f633fc4e5
+Content-Type: application/json
+
+###
